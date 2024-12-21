@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;1,9..40,500&display=swap");
+
+:root {
+  --primary: #5495fe;
+  --primary-2: #4d84e5;
+  --secondary: #ff4f3f;
+  --secondary-2: #e94738;
+  --bg: #ffffff;
+  --bg-2: #f5f5f9;
+  --bg-3: #dfeaf5;
+  --bg-4: #f9e2dd;
+}
+
+body {
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-2);
+}   
+
+section {
+    padding: 20px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    height: 45px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    padding: 10px;
+}
+
+.card {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    text-align: center;
+}
+
+.date {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.task-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 26px 0px 26px 0px;
+}
+
+textarea {
+    padding: 10px 10px 0px 10px;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--bg-2);
+    border: none;
+    font-size: 16px;
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    resize: none;
+}
+
+select {
+    padding: 10px;
+    background-color: var(--bg-2);
+    border: none;
+    font-size: 16px;
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    border-radius: 5px;
+    outline: none;
+}
+
+input {
+    padding: 10px;
+    background-color: var(--bg-2);
+    border: none;
+    font-size: 16px;
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    border-radius: 5px;
+    outline: none;
+}
+
+.add-btn {
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+}
+
+.add-btn:hover {
+    background-color: var(--primary-2);
+}
+
+.delete-btn {
+    color: white;
+    background-color: var(--secondary);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    margin-left: 10px;
+}
+
+.delete-btn i {
+    font-size: 10px;
+}
+
+.delete-btn:hover {
+    background-color: var(--secondary-2);
+}
+
+.task {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-2);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+li.done {
+    text-decoration: line-through;
+    background-color: var(--bg-3);
+}
+
+#overdue-list .task {
+    background-color: var(--bg-4);
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    margin-left: auto;
+    padding: 17px 26px 0px 0px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 10px;
+}
+
+input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    background-color: white;
+    font-family: FontAwesome;
+}
+
+input[type="checkbox"]:checked + label::before {
+    background-color: var(--primary);
+    border: 3px solid var(--primary);
+    content: '\f00c';
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    line-height: 16px;
+}
+
+input[type="checkbox"] + label {
+    font-size: 16px;
+    color: var(--primary);
+}
+
+
+@media (max-width: 568px) {
+
+    textarea, select, input, .add-btn {
+        font-size: 14px;
+    }
+
+    .tasks {
+        font-size: 14px;
+    }
+
+    .task {
+        font-size: 12px;
+    }
+
+    .delete-btn {
+        padding: 4px 9px;
+    }
+
+    .delete-btn i {
+        font-size: 9px;
+    }
+
+    input[type="checkbox"] + label::before {
+        width: 12px;
+        height: 12px;
+    }
+
+    input[type="checkbox"]:checked + label::before {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    input[type="checkbox"] + label {
+        padding: 15px 20px 0px 0px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .profile {
+        font-size: 14px
+    }
+    
+    textarea, select, input, .add-btn {
+        font-size:12px;
+    }
+
+    .tasks {
+        font-size: 12px;
+    }
+
+    .task {
+        font-size: 10px;
+    }
+
+    .delete-btn {
+        padding: 2px 7px;
+    }
+
+    .delete-btn i {
+        font-size: 9px;
+    }
+
+    input[type="checkbox"] + label::before {
+        width: 10px;
+        height: 10px;
+    }
+
+    input[type="checkbox"]:checked + label::before {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    input[type="checkbox"] + label {
+        padding: 13px 14px 0px 0px;
+    }
+
+}

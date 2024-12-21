@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List | Dino Widya P</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;1,9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+    <header>
+        <h1>To-Do List Application</h1>
+    </header>
+
+<section>
+    <div class="card">
+        <div class="profile">
+            <p><strong>Nama:</strong> Dino Widya Permana</p>
+            <p><strong>Jabatan:</strong> Fullstack Web Developer</p>
+        </div>
+        <div class="date">
+            <span id="current-date"></span>
+        </div>        
+        
+        <div class="task-input">
+            <textarea id="task-text" placeholder="Add task name"></textarea>
+            <select id="priority-level">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <input type="date" id="due-date" />
+            <button class="add-btn" onclick="addTask()">Add Task</button>
+        </div>
+        
+        <div class="tasks">
+            <h3>To-Do</h3>
+            <ul id="to-do-list"></ul>
+        </div>
+        <div class="tasks">
+            <h3>Overdue</h3>
+            <ul id="overdue-list" ></ul>
+        </div>
+        <div class="tasks">
+            <h3>Done</h3>
+            <ul id="done-list"></ul>
+        </div>
+    </div>
+</section>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
